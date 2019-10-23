@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    let computerSelection
+
+    function computerPlay() {
+        let random = Math.random();
+        
+        if (random < 0.3) {
+            computerSelection = 'rock';
+        } else if (random > 0.3 && random < 0.6) {
+            computerSelection = 'paper';
+        } else if (random > 0.6) {
+            computerSelection = 'scissors';
+        }
+        return computerSelection;
+    }
+
+    function oneRound(playerChoice, computerChoice) {
+      playerChoice = playerChoice.toLowerCase;
+      computerChoice = computerSelection;
+      
+      if (playerChoice === computerChoice) {
+        return 'It is a tie!';
+      } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
+        return 'Rock beats scissors. Human wins!'
+      } else if (playerChoice === 'paper' && computerChoice === 'rock') {
+        return 'Paper beats rock. Human wins!'
+      } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
+        return 'Scissors beat paper. Human wins!'
+      } else if (playerChoice === 'rock' && computerChoice === 'paper') {
+        return 'Rock beats paper. Computer wins!'
+      } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
+        return 'Scissors beat paper. Computer wins!'
+      } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
+        return 'Rock beats scissors. Computer wins!'
+      }
+    }
+
+  </script>
+</body>
+</html>
