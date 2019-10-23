@@ -22,14 +22,13 @@
     }
 
     function oneRound(playerChoice, computerChoice) {
-      playerChoice = playerChoice.toLowerCase;
-      computerSelection = computerSelection;
+      playerChoice = playerChoice.toLowerCase();
 
       if (playerChoice === computerChoice) {
         return 'It is a tie!';
       } 
       
-      if (playerChoice === 'rock') {
+      else if (playerChoice === 'rock') {
         if (computerChoice === 'scissors') {
           return 'Rock beats scissors. Human wins!';
         } else {
@@ -37,7 +36,7 @@
         }
       }
 
-      if (playerChoice === 'paper') {
+      else if (playerChoice === 'paper') {
         if (computerChoice === 'rock') {
           return 'Paper beats rock. Human wins!'
         } else {
@@ -45,7 +44,7 @@
         }
       }
 
-      if (playerChoice === 'scissors') {
+      else if (playerChoice === 'scissors') {
         if (computerChoice === 'paper') {
           'Scissors beats paper. Human wins!';
         } else {
