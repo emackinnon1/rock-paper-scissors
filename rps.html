@@ -63,12 +63,12 @@
     }
 
     function game(){
-      let input = prompt('Rock, paper, or scissors?');
       
       for (let i = 0; i < 5; i++) {
+        let input = prompt('Rock, paper, or scissors?');
         console.log(oneRound(input, computerPlay()));
-        console.log(computerScore);
-        console.log(playerScore);
+        console.log('Computer: ' + computerScore);
+        console.log('Human: ' + playerScore);
       }
       
     }
