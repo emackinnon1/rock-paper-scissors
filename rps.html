@@ -6,7 +6,9 @@
 <body>
   <script>
     // Your JavaScript goes here!
-    let computerSelection
+    let computerSelection;
+    let computerScore = 0;
+    let playerScore = 0;
 
     function computerPlay() {
         let random = Math.random();
@@ -30,28 +32,45 @@
       
       else if (playerChoice === 'rock') {
         if (computerChoice === 'scissors') {
+          playerScore++;
           return 'Rock beats scissors. Human wins!';
         } else {
+          computerScore++;
           return 'Paper beats rock. Computer wins!';
         }
       }
 
       else if (playerChoice === 'paper') {
         if (computerChoice === 'rock') {
+          playerScore++;
           return 'Paper beats rock. Human wins!'
         } else {
+          computerScore++;
           return 'Scissors beats paper. Computer wins!';
         }
       }
 
       else if (playerChoice === 'scissors') {
         if (computerChoice === 'paper') {
-          'Scissors beats paper. Human wins!';
+          playerScore++;
+          return 'Scissors beats paper. Human wins!';
         } else {
+          computerScore++;
           return 'Rock beats scissors. Computer wins!';
         }
       }
     
+    }
+
+    function game(){
+      let input = prompt('Rock, paper, or scissors?');
+      
+      for (let i = 0; i < 5; i++) {
+        console.log(oneRound(input, computerPlay()));
+        console.log(computerScore);
+        console.log(playerScore);
+      }
+      
     }
 
   </script>
