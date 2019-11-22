@@ -69,18 +69,33 @@
     
     }
 
-    function game(){
+    /*function game(){
       
-      /*for (let i = 0; i < 5; i++) {
-        let input = prompt('Rock, paper, or scissors?');*/
+      for (let i = 0; i < 5; i++) {
+        let input = prompt('Rock, paper, or scissors?');
         console.log(oneRound(input, computerPlay()));
         console.log('Computer: ' + computerScore);
-        console.log('Human: ' + playerScore);
-      }
+        console.log('Human: ' + playerScore);   
+      }*/
       
       const rock = document.querySelector("#rock");
-      rock.addEventListener("click", )
-    }
+      rock.addEventListener("click", function(e) {
+          console.log('rock');
+      });
+
+      const paper = document.querySelector("#paper");
+      paper.addEventListener("click", function(e){
+          console.log('paper');
+      });
+
+      const scissors = document.querySelector("#scissors");
+      scissors.addEventListener("click", function(e) {
+          console.log('scissors');
+      });
+
+      console.log('Computer: ' + computerScore);
+      console.log('Human: ' + playerScore);
+    
 
   </script>
 </body>
