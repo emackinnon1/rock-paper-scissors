@@ -8,7 +8,7 @@
 <button id="paper">Paper</button>
 <button id="scissors">Scissors</button>
 
-
+<div id='score'></div>
 
 
 
@@ -82,13 +82,26 @@
       const buttons = document.querySelectorAll('button');
       buttons.forEach((button) => {
         button.addEventListener('click', (e) => {
-            console.log(button.id);
+            playerChoice = button.id;
+
+            console.log(oneRound(playerChoice, computerPlay()));
+
+            const score = querySelector('#score');
+
+            const scoreboard = document.createElement('div');
+            scoreboard.id = "scoreboard";
+            scoreboard.textContent = `Computer: ${computerScore}
+Human: ${playerScore}`;
+            score.appendChild(scoreboard);
+
+
+            /*console.log(`Computer: ${computerScore}
+Human: ${playerScore}`);*/
         });
       });
 
 
-      console.log('Computer: ' + computerScore);
-      console.log('Human: ' + playerScore);
+
     
 
   </script>
