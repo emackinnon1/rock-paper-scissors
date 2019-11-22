@@ -14,6 +14,7 @@
 
   <script>
     // Your JavaScript goes here!
+    let playerChoice;
     let computerSelection;
     let computerScore = 0;
     let playerScore = 0;
@@ -78,20 +79,13 @@
         console.log('Human: ' + playerScore);   
       }*/
       
-      const rock = document.querySelector("#rock");
-      rock.addEventListener("click", function(e) {
-          console.log('rock');
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            console.log(button.id);
+        });
       });
 
-      const paper = document.querySelector("#paper");
-      paper.addEventListener("click", function(e){
-          console.log('paper');
-      });
-
-      const scissors = document.querySelector("#scissors");
-      scissors.addEventListener("click", function(e) {
-          console.log('scissors');
-      });
 
       console.log('Computer: ' + computerScore);
       console.log('Human: ' + playerScore);
