@@ -71,14 +71,6 @@ score.appendChild(result);
     
     }
 
-    /*function game(){
-      
-      for (let i = 0; i < 5; i++) {
-        let input = prompt('Rock, paper, or scissors?');
-        console.log(oneRound(input, computerPlay()));
-        console.log('Computer: ' + computerScore);
-        console.log('Human: ' + playerScore);   
-      }*/
       
       const buttons = document.querySelectorAll('button');
       buttons.forEach((button) => {

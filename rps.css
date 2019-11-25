@@ -1,0 +1,27 @@
+#buttons {
+    border: 3px grey solid;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    margin: auto;
+    background:lightgray;
+    position: relative;
+    padding: 10px;
+    margin: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+}
+
+#result {
+    margin: auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#scoreboard {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
