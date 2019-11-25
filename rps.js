@@ -30,36 +30,42 @@ score.appendChild(result);
     function oneRound(playerChoice, computerChoice) {
 
       if (playerChoice === computerChoice) {
-        return 'It is a tie!';
+        document.getElementById('result').textContent = 'It is a tie!';
       } 
       
       else if (playerChoice === 'rock') {
         if (computerChoice === 'scissors') {
             playerScore++;
-          return 'Rock beats scissors. Human wins!';
+          document.getElementById('result').textContent = 'Rock beats scissors. Human wins!';
+          
         } else {
-          return computerScore++;
-          return 'Paper beats rock. Computer wins!';
+          computerScore++;
+          document.getElementById('result').textContent = 'Paper beats rock. Computer wins!';
+          
         }
       }
 
       else if (playerChoice === 'paper') {
         if (computerChoice === 'rock') {
-          return playerScore++;
-          return 'Paper beats rock. Human wins!'
+          playerScore++;
+          document.getElementById('result').textContent = 'Paper beats rock. Human wins!';
+          
         } else {
-          return computerScore++;
-          return 'Scissors beats paper. Computer wins!';
+          computerScore++;
+          document.getElementById('result').textContent = 'Scissors beats paper. Computer wins!';
+          
         }
       }
 
       else if (playerChoice === 'scissors') {
         if (computerChoice === 'paper') {
-          return playerScore++;
-          return 'Scissors beats paper. Human wins!';
+          playerScore++;
+          document.getElementById('result').textContent = 'Scissors beats paper. Human wins!';
+          
         } else {
-          return computerScore++;
-          return 'Rock beats scissors. Computer wins!';
+          computerScore++;
+          document.getElementById('result').textContent = 'Rock beats scissors. Computer wins!';
+          
         }
       }
     
@@ -80,15 +86,9 @@ score.appendChild(result);
             playerChoice = button.id;
 
             oneRound(playerChoice, computerPlay());
+            document.getElementById('scoreboard').textContent = `Computer: ${computerScore}
+            Human: ${playerScore}`;
             
-            scoreboard.textContent += `Computer: ${computerScore}
-Human: ${playerScore}`;
-            
-            
-
-
-            /*console.log(`Computer: ${computerScore}
-Human: ${playerScore}`);*/
         });
       });
 
